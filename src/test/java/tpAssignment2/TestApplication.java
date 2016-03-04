@@ -1,8 +1,11 @@
 package tpAssignment2;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
+import tpAssignment2.arrayContent.ArrayContent;
 import tpAssignment2.booleans.TheFalse;
+import tpAssignment2.checkException.CheckException;
 import tpAssignment2.checkNull.NonNullness;
 import tpAssignment2.checkNull.Nullness;
 import tpAssignment2.floatingPoint.FloatingPint;
@@ -10,6 +13,7 @@ import tpAssignment2.integers.MyIntegers;
 import tpAssignment2.ObjectEquality.ObjEquality;
 import tpAssignment2.objIdentity.ObjIdentity;
 import tpAssignment2.booleans.TestTruth;
+import tpAssignment2.timeOut.TimeOut;
 
 
 /**
@@ -26,6 +30,10 @@ public class TestApplication {
     TheFalse aFalse = new TheFalse();
     Nullness isnull = new Nullness();
     NonNullness notNull = new NonNullness();
+    ArrayContent myArray = new ArrayContent();
+    CheckException ex = new CheckException();
+    TimeOut t = new TimeOut();
+
     @Test
     public void testFloat() throws Exception {
 
@@ -81,4 +89,31 @@ public class TestApplication {
 
         Assert.assertNotNull(notNull.isNotNull());
     }
+
+    @Ignore
+    @Test
+    public void testFailing() throws Exception {
+        Assert.fail("Failed");
+
+    }
+
+    @Test
+    public void testArrayContent() throws Exception {
+
+        Assert.assertArrayEquals(myArray.Array1,myArray.Array2);
+    }
+
+    @Test(expected=IndexOutOfBoundsException.class)
+    public void testException() throws Exception {
+
+        ex.check();
+
+    }
+
+    @Test(timeout=1000)
+    public void testTimeOut() throws Exception
+    {
+        t.time();
+    }
+
 }
