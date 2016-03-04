@@ -2,5 +2,13 @@
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/addition" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/divides" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/module1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/module2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/module3" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/module4" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/subtract" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/subtracts" charset="UTF-8" />
   </component>
 </project>
